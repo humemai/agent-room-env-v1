@@ -67,7 +67,7 @@ class DQNAgent(HandcraftedAgent):
         device: str = "cpu",
         ddqn: bool = True,
         dueling_dqn: bool = True,
-        default_root_dir: str = "./training_results/",
+        default_root_dir: str = "./training-results/",
     ):
         """Initialization.
 

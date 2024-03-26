@@ -65,7 +65,7 @@ class PPOAgent(HandcraftedAgent):
         train_seed: int = 42,
         test_seed: int = 42,
         device: str = "cpu",
-        default_root_dir: str = "./training_results/",
+        default_root_dir: str = "./training-results/",
     ):
         """Initialization.
 

@@ -76,7 +76,7 @@ allow_random_question: bool = False,
 seed: int = 42,
 allow_random_human: bool = True,
 allow_random_question: bool = True,
-default_root_dir: str = "./training_results/config3a/",
+default_root_dir: str = "./training-results/config3a/",
 ```
 
 ### Config 3.A
@@ -118,7 +118,7 @@ This doesn't work at all!
     "allow_random_human": True,
     "allow_random_question": True,
     "question_interval": 16,
-    "default_root_dir": "./training_results/question_interval-16/",
+    "default_root_dir": "./training-results/question_interval-16/",
 },
 ```
 
