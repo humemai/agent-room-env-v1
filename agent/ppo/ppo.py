@@ -3,25 +3,19 @@
 import os
 from copy import deepcopy
 
-import numpy as np
 import gymnasium as gym
+import numpy as np
 import torch
 import torch.optim as optim
-from tqdm.auto import tqdm
-
 from humemai.policy import answer_question, encode_observation, manage_memory
 from humemai.utils import write_yaml
+from tqdm.auto import tqdm
 
-from .utils import (
-    save_states_actions_probs_values,
-    select_action,
-    update_model,
-    save_validation,
-    save_final_results,
-    plot_results,
-)
-from .nn import LSTM
 from ..handcrafted import HandcraftedAgent
+from .nn import LSTM
+from .utils import (plot_results, save_final_results,
+                    save_states_actions_probs_values, save_validation,
+                    select_action, update_model)
 
 
 class PPOAgent(HandcraftedAgent):

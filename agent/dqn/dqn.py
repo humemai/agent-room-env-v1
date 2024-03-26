@@ -6,23 +6,15 @@ from copy import deepcopy
 import gymnasium as gym
 import torch
 import torch.optim as optim
-from tqdm.auto import trange
-
 from humemai.policy import answer_question, encode_observation, manage_memory
 from humemai.utils import write_yaml
+from tqdm.auto import trange
 
-from .utils import (
-    ReplayBuffer,
-    target_hard_update,
-    plot_results,
-    save_final_results,
-    save_validation,
-    save_states_q_values_actions,
-    select_action,
-    update_model,
-)
-from .nn import LSTM
 from ..handcrafted import HandcraftedAgent
+from .nn import LSTM
+from .utils import (ReplayBuffer, plot_results, save_final_results,
+                    save_states_q_values_actions, save_validation,
+                    select_action, target_hard_update, update_model)
 
 
 class DQNAgent(HandcraftedAgent):

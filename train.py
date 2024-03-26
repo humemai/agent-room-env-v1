@@ -4,9 +4,9 @@ import logging
 logger = logging.getLogger()
 logger.disabled = True
 
-from agent import DQNAgent
-
 from humemai.utils import read_yaml
+
+from agent import DQNAgent
 
 parser = argparse.ArgumentParser(description="train")
 parser.add_argument(

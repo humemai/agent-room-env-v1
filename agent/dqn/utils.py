@@ -1,11 +1,11 @@
 """Utility functions for DQN."""
 
 import logging
+import operator
 import os
 import random
 from collections import deque
-import operator
-from typing import Deque, Literal, Callable
+from typing import Callable, Deque, Literal
 
 import gymnasium as gym
 import matplotlib.pyplot as plt
@@ -15,14 +15,8 @@ import torch.nn.functional as F
 from IPython.display import clear_output
 from tqdm.auto import tqdm
 
-from ..utils import (
-    argmax,
-    is_running_notebook,
-    list_duplicates_of,
-    write_pickle,
-    write_yaml,
-)
-
+from ..utils import (argmax, is_running_notebook, list_duplicates_of,
+                     write_pickle, write_yaml)
 
 logging.basicConfig(
     level=os.environ.get("LOGLEVEL", "INFO").upper(),
