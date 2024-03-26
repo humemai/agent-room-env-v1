@@ -18,7 +18,6 @@ loss_function: huber
 lr: 0.001
 max_epochs: 16
 nn_params:
-  architecture: lstm
   embedding_dim: 32
   hidden_size: 64
   human_embedding_on_object_location: false
@@ -37,9 +36,9 @@ policies:
   answer_question: episodic_semantic
 precision: 32
 pretrain_semantic: true
-question_prob: 1.0
+question_prob: 0.5
 replay_size: 131072
-seed: 0
+seed: 3
 sync_rate: 10
 varying_rewards: false
 warm_start_size: 131072
