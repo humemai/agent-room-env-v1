@@ -1,19 +1,23 @@
 # Agent for RoomEnv-v1
 
+[![DOI](https://zenodo.org/badge/776465276.svg)](https://zenodo.org/doi/10.5281/zenodo.10876427)
 [![DOI](https://img.shields.io/badge/Paper-PDF-red.svg)](https://doi.org/10.1609/aaai.v37i1.25075)
 
-This repo is to train an agent that interacts with the [RoomEnv-v1](https://github.com/tae898/room-env).
+This repo is to train an agent that interacts with the [RoomEnv-v1](https://github.com/humemai/room-env).
 The agent is trained with DQN. See the paper ["A Machine with Short-Term, Episodic, and Semantic Memory Systems"](https://doi.org/10.1609/aaai.v37i1.25075) for more information.
 
 ## Prerequisites
 
 1. A unix or unix-like x86 machine
-1. python 3.8 or higher.
-1. Running in a virtual environment (e.g., conda, virtualenv, etc.) is highly recommended so that you don't mess up with the system python.
-1. Make sure you are in the same directory where this README is located, i.e., `AgentRoomEnv1`
-1. Install the `explicit_memory` python package, by running `pip install ..`
-   1. This will install the gymnasium environment [RoomEnv1](https://github.com/tae898/room-env)
-2. `pip install -r requirements.txt`
+1. python 3.10 or higher.
+1. Running in a virtual environment (e.g., conda, virtualenv, etc.) is highly
+   recommended so that you don't mess up with the system python.
+1. Install the `humemai` python package, by running `pip install
+git+https://github.com/humemai/humemai@main`
+1. Install the `room-env` python package, by running `pip install
+git+https://github.com/humemai/room-env@main`
+1. Install the extra necessary python packages, by running `pip install -r
+requirements.txt`
 
 ## Run training
 

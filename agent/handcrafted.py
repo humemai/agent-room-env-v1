@@ -7,14 +7,14 @@ from copy import deepcopy
 import gymnasium as gym
 import numpy as np
 
-from explicit_memory.memory import (
+from humemai.memory import (
     EpisodicMemory,
     MemorySystems,
     SemanticMemory,
     ShortMemory,
 )
-from explicit_memory.policy import answer_question, encode_observation, manage_memory
-from explicit_memory.utils import write_yaml
+from humemai.policy import answer_question, encode_observation, manage_memory
+from humemai.utils import write_yaml
 
 
 class HandcraftedAgent:

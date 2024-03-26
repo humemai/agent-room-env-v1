@@ -9,10 +9,10 @@ import torch
 import torch.optim as optim
 from tqdm.auto import tqdm
 
-from explicit_memory.nn import LSTM
-from explicit_memory.policy import answer_question, encode_observation, manage_memory
-from explicit_memory.utils import write_yaml
-from explicit_memory.utils.ppo import (
+from humemai.nn import LSTM
+from humemai.policy import answer_question, encode_observation, manage_memory
+from humemai.utils import write_yaml
+from humemai.utils.ppo import (
     save_states_actions_probs_values,
     select_action,
     update_model,

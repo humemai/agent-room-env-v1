@@ -6,7 +6,7 @@ logger.disabled = True
 
 from agent import DQNAgent
 
-from explicit_memory.utils import read_yaml
+from humemai.utils import read_yaml
 
 parser = argparse.ArgumentParser(description="train")
 parser.add_argument(
