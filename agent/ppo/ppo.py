@@ -9,10 +9,10 @@ import torch
 import torch.optim as optim
 from tqdm.auto import tqdm
 
-from humemai.nn import LSTM
 from humemai.policy import answer_question, encode_observation, manage_memory
 from humemai.utils import write_yaml
-from humemai.utils.ppo import (
+
+from .utils import (
     save_states_actions_probs_values,
     select_action,
     update_model,
@@ -20,8 +20,8 @@ from humemai.utils.ppo import (
     save_final_results,
     plot_results,
 )
-
-from .handcrafted import HandcraftedAgent
+from .nn import LSTM
+from ..handcrafted import HandcraftedAgent
 
 
 class PPOAgent(HandcraftedAgent):
@@ -58,11 +58,8 @@ class PPOAgent(HandcraftedAgent):
             "hidden_size": 64,
             "num_layers": 2,
             "embedding_dim": 64,
-            "v1_params": {
-                "include_human": "sum",
-                "human_embedding_on_object_location": False,
-            },
-            "v2_params": None,
+            "include_human": "sum",
+            "human_embedding_on_object_location": False,
             "fuse_information": "sum",
             "include_positional_encoding": True,
             "max_timesteps": 128,
@@ -166,12 +163,8 @@ class PPOAgent(HandcraftedAgent):
         self.nn_params["memory_of_interest"] = ["episodic", "semantic", "short"]
         self.nn_params["n_actions"] = len(self.action2str)
 
-        self.actor = LSTM(
-            **self.nn_params, is_dqn_or_ppo="ppo", is_actor=True, is_critic=False
-        )
-        self.critic = LSTM(
-            **self.nn_params, is_dqn_or_ppo="ppo", is_actor=False, is_critic=True
-        )
+        self.actor = LSTM(**self.nn_params, is_actor=True, is_critic=False)
+        self.critic = LSTM(**self.nn_params, is_actor=False, is_critic=True)
 
         # optimizer
         self.actor_optimizer = optim.Adam(self.actor.parameters())

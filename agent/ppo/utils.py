@@ -12,7 +12,7 @@ import torch
 from IPython.display import clear_output
 from tqdm.auto import tqdm
 
-from .utils import is_running_notebook, list_duplicates_of, write_pickle, write_yaml
+from ..utils import is_running_notebook, list_duplicates_of, write_pickle, write_yaml
 
 logging.basicConfig(
     level=os.environ.get("LOGLEVEL", "INFO").upper(),

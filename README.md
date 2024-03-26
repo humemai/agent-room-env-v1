@@ -16,8 +16,6 @@ The agent is trained with DQN. See the paper ["A Machine with Short-Term, Episod
 git+https://github.com/humemai/humemai@main`
 1. Install the `room-env` python package, by running `pip install
 git+https://github.com/humemai/room-env@main`
-1. Install the extra necessary python packages, by running `pip install -r
-requirements.txt`
 
 ## Run training
 
@@ -39,6 +37,11 @@ checkpoints will be saved at [`./training_results/`](./training_results/).
 | ![](./figures/des_size=l-capacity=all-test_total_reward_mean-v1.png) |
 
 Also check out [`./models/`](./models) to see the saved training results.
+
+## pdoc documentation
+
+Click on [this link](https://humemai.github.io/agent-room-env-v1) to see the HTML rendered
+docstrings
 
 ## Contributing
 

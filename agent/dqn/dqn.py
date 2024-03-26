@@ -1,4 +1,5 @@
 """DQN Agent for the RoomEnv1 environment."""
+
 import os
 from copy import deepcopy
 
@@ -7,11 +8,10 @@ import torch
 import torch.optim as optim
 from tqdm.auto import trange
 
-from humemai.nn import LSTM
 from humemai.policy import answer_question, encode_observation, manage_memory
 from humemai.utils import write_yaml
 
-from humemai.utils.dqn import (
+from .utils import (
     ReplayBuffer,
     target_hard_update,
     plot_results,
@@ -21,9 +21,8 @@ from humemai.utils.dqn import (
     select_action,
     update_model,
 )
-
-
-from .handcrafted import HandcraftedAgent
+from .nn import LSTM
+from ..handcrafted import HandcraftedAgent
 
 
 class DQNAgent(HandcraftedAgent):
@@ -61,11 +60,8 @@ class DQNAgent(HandcraftedAgent):
             "hidden_size": 64,
             "num_layers": 2,
             "embedding_dim": 64,
-            "v1_params": {
-                "include_human": "sum",
-                "human_embedding_on_object_location": False,
-            },
-            "v2_params": None,
+            "include_human": "sum",
+            "human_embedding_on_object_location": False,
             "fuse_information": "sum",
             "include_positional_encoding": True,
             "max_timesteps": 128,
@@ -167,7 +163,6 @@ class DQNAgent(HandcraftedAgent):
         self.nn_params["memory_of_interest"] = ["episodic", "semantic", "short"]
         self.nn_params["n_actions"] = len(self.action2str)
         self.nn_params["dueling_dqn"] = self.dueling_dqn
-        self.nn_params["is_dqn_or_ppo"] = "dqn"
         self.nn_params["is_actor"] = False
         self.nn_params["is_critic"] = False
 
