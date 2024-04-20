@@ -17,10 +17,8 @@ nn_params:
   hidden_size: 64
   num_layers: 2
   embedding_dim: 32
-  v1_params:
-    include_human: sum
-    human_embedding_on_object_location: false
-  v2_params: null
+  include_human: sum
+  human_embedding_on_object_location: false
   include_positional_encoding: false
   max_timesteps: null
   max_strength: null
