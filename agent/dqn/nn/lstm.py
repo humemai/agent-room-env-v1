@@ -5,10 +5,9 @@ from typing import Literal
 
 import numpy as np
 import torch
-from humemai.utils import split_by_possessive
 from torch import nn
 
-from ...utils import positional_encoding
+from ...utils import split_by_possessive, positional_encoding
 
 
 class LSTM(nn.Module):

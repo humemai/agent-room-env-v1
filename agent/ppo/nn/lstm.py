@@ -5,11 +5,10 @@ from typing import Literal
 
 import numpy as np
 import torch
-from humemai.utils import split_by_possessive
 from torch import nn
 from torch.distributions import Categorical
 
-from ...utils import positional_encoding
+from ...utils import positional_encoding, split_by_possessive
 
 
 def init_layer_uniform(layer: nn.Linear, init_w: float = 3e-3) -> None:
