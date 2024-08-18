@@ -1,10 +1,10 @@
 # Agent for RoomEnv-v1
 
 [![DOI](https://zenodo.org/badge/776465276.svg)](https://zenodo.org/doi/10.5281/zenodo.10876427)
-[![DOI](https://img.shields.io/badge/Paper-PDF-red.svg)](https://doi.org/10.1609/aaai.v37i1.25075)
+[![DOI](https://img.shields.io/badge/Paper-PDF-red.svg)](https://arxiv.org/abs/2212.02098)
 
 This repo is to train an agent that interacts with the [RoomEnv-v1](https://github.com/humemai/room-env).
-The agent is trained with DQN. See the paper ["A Machine with Short-Term, Episodic, and Semantic Memory Systems"](https://doi.org/10.1609/aaai.v37i1.25075) for more information.
+The agent is trained with DQN. See the paper ["A Machine with Short-Term, Episodic, and Semantic Memory Systems"](https://arxiv.org/abs/2212.02098) for more information.
 
 ## Prerequisites
 
@@ -51,7 +51,7 @@ Contributions are what make the open source community such an amazing place to b
 1. Push to the Branch (`git push origin feature/AmazingFeature`)
 1. Open a Pull Request
 
-## [Cite our paper](https://doi.org/10.1609/aaai.v37i1.25075)
+## [Cite our paper](https://arxiv.org/abs/2212.02098)
 
 ```bibtex
 @article{Kim_Cochez_Francois-Lavet_Neerincx_Vossen_2023,
