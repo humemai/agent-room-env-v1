@@ -7,8 +7,8 @@ import gymnasium as gym
 import numpy as np
 import torch
 import torch.optim as optim
-from humemai.policy import answer_question, encode_observation, manage_memory
-from humemai.utils import write_yaml
+from humemai_research.policy import answer_question, encode_observation, manage_memory
+from humemai_research.utils import write_yaml
 from tqdm.auto import tqdm
 
 from ..handcrafted import HandcraftedAgent
