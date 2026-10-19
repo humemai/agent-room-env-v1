@@ -5,7 +5,7 @@
 Code for a deep-Q-learning agent with explicit short-term, episodic, and semantic memory
 that operates in [RoomEnv-v1](https://github.com/humemai/room-env).
 
-For the research overview, see the [project page](https://humem.ai/projects/explicit-memory)
+For the research overview, see the [project page](https://humem.ai/research/explicit-memory)
 or the paper on [arXiv](https://arxiv.org/abs/2212.02098).
 
 This README focuses on the code, setup, training flow, and results in this repository.
@@ -62,7 +62,7 @@ paper source and additional figure assets.
 
 ## Further reading
 
-- [Project page](https://humem.ai/projects/explicit-memory)
+- [Project page](https://humem.ai/research/explicit-memory)
 - [Paper on arXiv](https://arxiv.org/abs/2212.02098)
 - [RoomEnv-v1](https://github.com/humemai/room-env)
 
